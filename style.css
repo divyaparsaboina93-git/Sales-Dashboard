@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #f4f7fb;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: linear-gradient(180deg, #1e3a8a, #3b82f6);
+    color: white;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header input {
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.header-right {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* CHARTS */
+.charts {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.chart-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* TABLES */
+.tables {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.table-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+td,
+th {
+    padding: 8px;
+    text-align: left;
+}
+
+ul {
+    margin-top: 10px;
+}
+
+li {
+    padding: 5px 0;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .cards {
+        grid-template-columns: 2fr 2fr;
+    }
+
+    .charts {
+        grid-template-columns: 1fr;
+    }
+
+    .tables {
+        grid-template-columns: 1fr;
+    }
+}

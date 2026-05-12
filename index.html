@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2>📊 DashPro</h2>
+            <ul>
+                <li>🏠 Dashboard</li>
+                <li>📦 Orders</li>
+                <li>🛒 Products</li>
+                <li>👥 Customers</li>
+                <li>📈 Reports</li>
+                <li>⚙️ Settings</li>
+            </ul>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <!-- HEADER -->
+            <header class="header">
+                <input type="text" placeholder="Search...">
+                <div class="header-right">
+                    🔔
+                    👤
+                </div>
+            </header>
+
+            <!-- SUMMARY CARDS -->
+            <section class="cards">
+                <div class="card">💰 Revenue <h3>$24,500</h3>
+                </div>
+                <div class="card">📦 Orders <h3>1,240</h3>
+                </div>
+                <div class="card">👥 Customers <h3>320</h3>
+                </div>
+                <div class="card">📊 Conversion <h3>5.6%</h3>
+                </div>
+            </section>
+
+            <!-- CHARTS -->
+            <section class="charts">
+                <div class="chart-card">
+                    <h3>Sales Overview</h3>
+                    <canvas id="lineChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Monthly Revenue</h3>
+                    <canvas id="barChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Sales by Region</h3>
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </section>
+
+            <!-- TABLE + ORDERS -->
+            <section class="tables">
+
+                <div class="table-card">
+                    <h3>Top Products</h3>
+                    <table>
+                        <tr>
+                            <th>Product</th>
+                            <th>Sales</th>
+                        </tr>
+                        <tr>
+                            <td>iPhone</td>
+                            <td>$12,000</td>
+                        </tr>
+                        <tr>
+                            <td>Laptop</td>
+                            <td>$9,500</td>
+                        </tr>
+                        <tr>
+                            <td>Headphones</td>
+                            <td>$4,000</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="table-card">
+                    <h3>Recent Orders</h3>
+                    <ul>
+                        <li>#1021 - $250</li>
+                        <li>#1022 - $120</li>
+                        <li>#1023 - $560</li>
+                    </ul>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
